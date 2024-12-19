@@ -7,8 +7,7 @@ public class Main {
   // Then, change your solvePuzzle() function to use this inputData array to get
   // the puzzle result.
   private static int[] inputData = new int[] { 1993, 1715, 1997, 1666, 1676, 1830, 1203, 1800, 1125, 1191, 1902, 1972,
-      1471,
-      1137, 2003, 1250, 1548, 1070, 1152, 2004, 1127, 1111, 1898, 1848, 1934, 1236, 1704, 1950, 1387, 1713, 1214, 1266,
+      1471, 1137, 2003, 1250, 1548, 1070, 1152, 2004, 1127, 1111, 1898, 1848, 1934, 1236, 1704, 1950, 1387, 1713, 1214, 1266,
       1114, 1089, 1677, 1207, 1341, 1689, 1772, 1901, 1932, 1645, 1285, 1884, 883, 1291, 1543, 1455, 1213, 1088, 1784,
       1506, 1879, 1811, 1880, 994, 1021, 1585, 1662, 1683, 1071, 1643, 1754, 1389, 1124, 1820, 1168, 1875, 1017, 1180,
       1375, 1359, 1311, 1357, 1501, 1719, 1584, 1609, 1977, 1786, 1232, 1263, 1748, 1664, 1693, 1766, 1598, 1053, 1277,
@@ -28,15 +27,24 @@ public class Main {
     // Using the test data above, find the two entries that sum to 2020.
     // Then multiply those two numbers together.
     /** ************TODO: YOUR CODE GOES HERE.***********/
-
+    for(int i = 0; i < testData.length; i++)
+    {
+      int val3 = val1 + val2;
+      if(val3 == 2020){
+        System.out.println("Value 1: " + val1);
+        System.out.println("Value 2: " + val2);
+      }
+      else
+      {
+        System.out.println(i + " this is how many it took to get the result");
+      }
+    }
 
 
 
     /****************************************************/
 
     // Print the values and return product
-    System.out.println("Value 1: " + val1);
-    System.out.println("Value 2: " + val2);
     return val1 * val2;
   }
 
