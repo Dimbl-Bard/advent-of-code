@@ -22,29 +22,33 @@ public class Main {
   public static int solvePuzzle() {
     // These are placeholder variables. Replace them with your results.
     int frog = 0;
-    int dog = 1;
+    int dog = 0;
     int atemptCount = 0;
-    var val1 = testData[atemptCount];
-    var val2 = testData[atemptCount];
+    var val1 = testData[dog];
+    var val2 = testData[frog];
     // Using the test data above, find the two entries that sum to 2020.
     // Then multiply those two numbers together.
     /** ************TODO: YOUR CODE GOES HERE.***********/
-    for(int i = 0; i < testData.length; i++)
+    for(int i = 0; i < testData.length - 1; i++)
     {
-      
+      val1 = testData[dog];
+      val2 = testData[frog];
+      frog ++;
       int val3 = val1 + val2;
-      if(val3 == 2020){
-        System.out.println("Value 1: " + val1);
-        System.out.println("Value 2: " + val2);
-        System.out.println("the result was " + val3);
-        break;
+      for(int a = 0; a < testData.length - 1; a++){
+        if(val3 == 2020){
+          System.out.println("Value 1: " + val1);
+          System.out.println("Value 2: " + val2);
+          System.out.println("the result was " + val3);
+          break;
       }
       else
       {
         System.out.println(atemptCount + " this is how many it took to get the result");
         atemptCount ++;
         dog ++;     
-        frog ++;
+        System.out.println(val3);
+       }
       }
     }
 
