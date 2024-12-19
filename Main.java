@@ -21,22 +21,30 @@ public class Main {
   // Function to calculate the puzzle result. This runs when the page loads.
   public static int solvePuzzle() {
     // These are placeholder variables. Replace them with your results.
-    var val1 = 0;
-    var val2 = 0;
-
+    int frog = 0;
+    int dog = 1;
+    int atemptCount = 0;
+    var val1 = testData[atemptCount];
+    var val2 = testData[atemptCount];
     // Using the test data above, find the two entries that sum to 2020.
     // Then multiply those two numbers together.
     /** ************TODO: YOUR CODE GOES HERE.***********/
     for(int i = 0; i < testData.length; i++)
     {
+      
       int val3 = val1 + val2;
       if(val3 == 2020){
         System.out.println("Value 1: " + val1);
         System.out.println("Value 2: " + val2);
+        System.out.println("the result was " + val3);
+        break;
       }
       else
       {
-        System.out.println(i + " this is how many it took to get the result");
+        System.out.println(atemptCount + " this is how many it took to get the result");
+        atemptCount ++;
+        dog ++;     
+        frog ++;
       }
     }
 
